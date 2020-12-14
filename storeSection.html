@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Kelvin Store</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet"/>
+    <a class="logo" href="index.html">Inventory Manager</a>
+    <p>Modify and check the stock of products of local stores</p>
+    
+  </head>
+
+  <button class="button" id="showProductsButton">Show/ Refresh table of products</button>
+  <button class="button" id="productFormButton">new product</button>
+  <button class="button" id="restockAll">Restock all</button>
+  <button class="button" id="restockAllWith0Stock">Restock all with no stock</button>
+  <button class="button" id="addStock">Add Stock</button>
+  <button class="button" id="removeStock">Take out Stock</button>
+  <button class="button" id="changePrice">Change Price</button>
+  <button class="button" id="changeAisle">Change aisle of a product</button>
+  <button class="button" id="delete">Delete a product</button>
+  <button class="button" id="discontinue">Discontinue a product</button>
+  <button class="button" id="downloadProductButton">Download all this data</button>
+  <input class="button" type="button" value="Upload data (remember to refesh afterwards)" onclick="document.getElementById('fileProduct').click();" />
+  <input type="file" style="display:none;" id="fileProduct"/>
+  <div style="margin-top:25px;"id="table"></div>
+
+  <body>
+    <script src="classes/Products.js"></script>
+    <script src="classes/Store.js"></script>
+    <script src="scripts/storeSection.js"></script>
+
+  </body>
+</html>

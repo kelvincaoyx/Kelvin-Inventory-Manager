@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Kelvin Store</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet"/>
+    <a class="logo" href="index.html">Inventory Manager</a>
+    <p>Request and check stock of products in our storage warehouses</p>
+    
+  </head>
+
+  <button class="button" id="showPalletsButton">Refresh table of products</button>
+  <button class="button" id="palletFormButton">Add new product</button>
+  <button class="button" id="deletePalletButton">Remove product from list</button>
+  <button class="button" id="addPalletButton">Add pallets to inventory</button>
+  <button class="button" id="removePalletButton">Remove pallets from inventory</button>
+  <button class="button" id="requestPalletButton">Request Pallets for your store</button>
+  <button class="button" id="changePalletButton">Change amount of stock that can fit on a pallet</button>
+  <button class="button" id="updatePalletButton">update shipping status of pallet</button>
+  <button class="button" id="updateDestinationPalletButton">update shipping destination of pallet</button>
+  <button class="button" id="downloadPalletButton">Download all this data</button>
+
+  <input class="button" type="button" value="Upload data (remember to refesh afterwards)" onclick="document.getElementById('file').click();" />
+  <input type="file" style="display:none;" id="file"/>
+  
+  
+  <div style="margin-top:25px;" id="warehouseTable"></div>
+  
+  <body>
+    <script src="classes/Products.js"></script>
+    <script src="classes/Warehouse.js"></script>
+    <script src="scripts/warehouseSection.js"></script>
+
+  </body>
+</html>

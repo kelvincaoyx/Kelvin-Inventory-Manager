@@ -132,7 +132,7 @@ function updateProductInfo(newProductSpreadSheet){
     store = productSpeadSheet[7];
     aisle = productSpeadSheet[8];
     lastUpdated = productSpeadSheet[9];
-    newProductSheet = new Store(productName, productCode, Number(stock), Number(price), restocking, discontinued, store, aisle, lastUpdated);
+    newProductSheet = new StoreProduct(productName, productCode, Number(stock), Number(price), restocking, discontinued, store, aisle, lastUpdated);
     updatedProducts.push(newProductSheet);
     refreshTable();
   };
@@ -153,7 +153,7 @@ for (var i = 0; i < 10; i++){
   let lastUpdated = ["12/09/2020", "12/08/2020", "12/07/2020", "12/06/2020","12/01/2020","12/02/2020","12/11/2020","12/13/2020","12/01/2020","12/02/2020"]
   let restocking = [false, false, true, false, false, false, false, false, false, false];
   let discontinued = [false, false, false, false, true, false, false, false, true, false];
-  let newProduct = new Store(productName[i], productCode[i], stock[i], price[i], restocking[i], discontinued[i], store[i], aisle[i], lastUpdated[i]);
+  let newProduct = new StoreProduct(productName[i], productCode[i], stock[i], price[i], restocking[i], discontinued[i], store[i], aisle[i], lastUpdated[i]);
   productObjects.push(newProduct);
 };
 
@@ -187,7 +187,7 @@ productFormActivate.addEventListener("click", () => {
     mm='0'+mm;
   } 
   var lastUpdated = mm +'/'+ dd + '/' + yyyy ;
-  productFormInfo = new Store(productName, productCode, stock, price, restocking, discontinued, store, aisle, lastUpdated);
+  productFormInfo = new StoreProduct(productName, productCode, stock, price, restocking, discontinued, store, aisle, lastUpdated);
   productObjects.push(productFormInfo);
   refreshTable();
 });

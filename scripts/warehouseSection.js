@@ -118,7 +118,7 @@ function updateWarehouseInfo(newSpreadSheet){
     palletSize = palletSpeadSheet[4];
     currentLocation = palletSpeadSheet[6];
     shippingDestination = palletSpeadSheet[7];
-    newPalletSheet = new Warehouse(productName, productCode, Number(stock), Number(palletSize), currentLocation, shippingDestination);
+    newPalletSheet = new WarehouseProduct(productName, productCode, Number(stock), Number(palletSize), currentLocation, shippingDestination);
     updatedPallets.push(newPalletSheet);
     refreshPalletTable();
   };
@@ -135,7 +135,7 @@ for (var i = 0; i < 10; i++){
   let palletSize = ['21', '12', '30', '23', '48', '23', '15', '27', '24', '10'];
   let currentLocation = ['chicago', 'New York', "N/A",  'in transit', "in transit", "Washington", "Montreal", "In transit", 'Las Vegas', 'N/A'];
   let shippingDestination = ["none", "none",'N/A', 'toronto', 'niagara', 'none', "none", "Toronto", "none", "N/A"];
-  let newProduct = new Warehouse(productName[i], productCode[i], stock[i], palletSize[i], currentLocation[i], shippingDestination[i]);
+  let newProduct = new WarehouseProduct(productName[i], productCode[i], stock[i], palletSize[i], currentLocation[i], shippingDestination[i]);
   warehouseObjects.push(newProduct);
 };
 
@@ -156,7 +156,7 @@ palletFormActivate.addEventListener("click", () => {
   var palletSize = Number(prompt("Enter # of products per stock"));
   var currentLocation = prompt("Enter current location")
   var shippingDestination = prompt("Enter shippingDestination");
-  palletForm = new Warehouse(productName, productCode, stock, palletSize, currentLocation, shippingDestination);
+  palletForm = new WarehouseProduct(productName, productCode, stock, palletSize, currentLocation, shippingDestination);
   warehouseObjects.push(palletForm)
   refreshPalletTable()
 });
@@ -206,7 +206,7 @@ requestPalletButtonActivate.addEventListener("click", () => {
   var requestedDestination = prompt("Where do you want the " + requestedStock + " pallets of " + warehouseObjects[number].productName + " to go?");
   warehouseObjects[number].removeStock(requestedStock)
   
-  requestedPallets = new Warehouse(warehouseObjects[number].productName, warehouseObjects[number].productCode, requestedStock, warehouseObjects[number].palletSize, warehouseObjects[number].currentLocation, requestedDestination)
+  requestedPallets = new WarehouseProduct(warehouseObjects[number].productName, warehouseObjects[number].productCode, requestedStock, warehouseObjects[number].palletSize, warehouseObjects[number].currentLocation, requestedDestination)
   warehouseObjects.push(requestedPallets)
 
   if (warehouseObjects[number].stock == 0){

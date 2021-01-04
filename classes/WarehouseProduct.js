@@ -3,7 +3,7 @@
  * 
  * @class
  */
-class Warehouse extends Products {
+class WarehouseProduct extends Inventory {
 
   /**
    * The constructor for Warehouse objects

@@ -3,6 +3,7 @@
  * 
  * @class
  */
+//fix
 class WarehouseProduct extends Inventory {
 
   /**

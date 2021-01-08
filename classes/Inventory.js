@@ -3,6 +3,7 @@
  * 
  * @class
  */
+//fix
 class Inventory{
 
     /**

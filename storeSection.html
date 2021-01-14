@@ -6,6 +6,7 @@
     <title>Kelvin Store</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <a class="logo" href="index.html">Inventory Manager</a>
     <p>Modify and check the stock of products of local stores</p>
     
@@ -24,6 +25,11 @@
   <button class="button" id="downloadProductButton">Download all this data</button>
   <input class="button" type="button" value="Upload data (remember to refesh afterwards)" onclick="document.getElementById('fileProduct').click();" />
   <input type="file" style="display:none;" id="fileProduct"/>
+  <button class="button" id="sortIStock">Sort products by stock (low to high)</button>
+  <button class="button" id="sortBStock">Sort products by stock (high to low)</button>
+  <button class="button" id="sortStock" style="display:none;">Sort products by stock using .sort (low to high)</button>
+  <button class="button" id="findLProduct">Search for product using code</button>
+  <button class="button" id="findBProduct">Sort and search for product using its code</button>
   <div style="margin-top:25px;"id="table"></div>
 
   <body>

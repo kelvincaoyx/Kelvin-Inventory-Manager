@@ -6,6 +6,7 @@
     <title>Kelvin Store</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <a class="logo" href="index.html">Inventory Manager</a>
     <p>Request and check stock of products in our storage warehouses</p>
     
@@ -21,10 +22,12 @@
   <button class="button" id="updatePalletButton">update shipping status of pallet</button>
   <button class="button" id="updateDestinationPalletButton">update shipping destination of pallet</button>
   <button class="button" id="downloadPalletButton">Download all this data</button>
-
   <input class="button" type="button" value="Upload data (remember to refesh afterwards)" onclick="document.getElementById('file').click();" />
   <input type="file" style="display:none;" id="file"/>
-  
+  <button class="button" id="sortINumOfProducts">Sort by number of products (low to high)</button>
+  <button class="button" id="sortBNumOfProducts">Sort by number of products (high to low)</button>
+  <button class="button" id="findTheLProduct">Search for product using code</button>
+  <button class="button" id="findTheBProduct">Sort and search for product using its code</button>
   
   <div style="margin-top:25px;" id="warehouseTable"></div>
   

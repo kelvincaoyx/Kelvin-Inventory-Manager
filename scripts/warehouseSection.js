@@ -1,7 +1,7 @@
 /*
 ----------------------------------------------------------------------------------------------
 Name:        warehouseSection.js
-Purpose:     Practice with objects, inheritance, files, conversion of datatypes and one-dimensional arrays of objects
+Purpose:     Practice with objects, inheritance, files, conversion of datatypes, one-dimensional arrays of objects, along with sorting and searching
 
 Author:      Kelvin Cao (629937)
 Created:     07-Dec-2020
@@ -192,7 +192,7 @@ function findTheBProduct(array, code){
     else if (array[mid].productCode < code){
       low = mid + 1;
     } 
-    else {
+    else if (array[mid].productCode == code){
       secondTime = new Date();
       console.log("Binary Searching Time: " + (secondTime.getTime() - firstTime.getTime()))
       return mid;
